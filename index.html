@@ -46,6 +46,8 @@
             background-color: #f44336;
             position: absolute;
             right: 0;
+            width: 100px; /* Tamanho fixo */
+            height: 40px; /* Tamanho fixo */
         }
     </style>
 </head>
@@ -68,7 +70,7 @@
         }
 
         // Mover o botão "Não" quando o usuário tentar clicar nele
-        btnNo.addEventListener('mouseover', moveNoButton);
+        btnNo.addEventListener('click', moveNoButton);
 
         // Função para o botão "Sim"
         document.getElementById('yes').addEventListener('click', () => {
