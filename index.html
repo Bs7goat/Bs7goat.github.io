@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            transition: 0.3s;
+        }
+
+        #no {
+            background-color: #f44336;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Aceita sair comigo?</h1>
+    <div class="buttons">
+        <button class="button" id="yes">Sim</button>
+        <button class="button" id="no">Não</button>
+    </div>
+
+    <script>
+        const btnNo = document.getElementById('no');
+
+        // Função para movimentar o botão "Não" aleatoriamente
+        btnNo.addEventListener('mouseover', () => {
+            const x = Math.floor(Math.random() * (window.innerWidth - btnNo.offsetWidth));
+            const y = Math.floor(Math.random() * (window.innerHeight - btnNo.offsetHeight));
+            btnNo.style.left = `${x}px`;
+            btnNo.style.top = `${y}px`;
+        });
+
+        // Função para o botão "Sim"
+        document.getElementById('yes').addEventListener('click', () => {
+            alert("Parabéns, você tem bom gosto!");
+            setTimeout(() => {
+                window.location.href = "https://www.youtube.com/watch?v=izGwDsrQ1eQ";
+            }, 500);
+        });
+    </script>
+
+</body>
+</html>
