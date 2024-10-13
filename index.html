@@ -13,6 +13,7 @@
             align-items: center;
             height: 100vh;
             background-color: #f2f2f2;
+            margin: 0;
         }
 
         h1 {
@@ -21,6 +22,7 @@
 
         .buttons {
             margin-top: 20px;
+            position: relative;
         }
 
         .button {
@@ -52,8 +54,8 @@
     <script>
         const btnNo = document.getElementById('no');
 
-        // Função para movimentar o botão "Não" aleatoriamente
-        btnNo.addEventListener('mouseover', () => {
+        // Função para movimentar o botão "Não" aleatoriamente quando tentarem clicar
+        btnNo.addEventListener('click', () => {
             const x = Math.floor(Math.random() * (window.innerWidth - btnNo.offsetWidth));
             const y = Math.floor(Math.random() * (window.innerHeight - btnNo.offsetHeight));
             btnNo.style.left = `${x}px`;
